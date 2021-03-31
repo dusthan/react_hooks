@@ -1,18 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Counter1 from './components/Couter1'
-import Counter from './components/Counter'
+// import Counter1 from './components/Couter1';
+// import Counter from './components/Counter';
 
-import SeachResults from './components/Search'
-import Search from './components/FormSearch'
+// import SeachResults from './components/Search';
+// import Search from './components/FormSearch';
 
-import SearchReducer from './components/FormSearchReducer'
+// import SearchReducer from './components/FormSearchReducer';
+import AppP from './components/UseContext';
+// import ContextConsumer from './components/ContextConsumer';
+import {AppPro as App2} from './components/ProviderApp';
 
+import ThemeSelect from './components/ThemeSelect';
 
 function App() {
   return (
     <div className="App">
-      <SearchReducer />
+      <App2 />
+      <AppP />
+      <hr />
+      <ThemeSelect / >
+      {/* <SearchReducer />
       <Search />
       <SeachResults />
       <Counter />
@@ -30,7 +38,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
