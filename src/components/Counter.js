@@ -9,6 +9,7 @@ function Counter(){
         let id = setInterval(()=>{
             setCount(count+step)
         },1000)
+        console.log('timer id:'+id)
         return ()=>clearInterval(id)
     },[count,step])
 

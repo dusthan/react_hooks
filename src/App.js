@@ -12,10 +12,28 @@ import AppP from './components/UseContext';
 import {AppPro as App2} from './components/ProviderApp';
 
 import ThemeSelect from './components/ThemeSelect';
+import Counter from './components/Counter';
+import TagInput from './components/TagInput';
+
+import Modal from './components/Modal'
+import { useState } from 'react';
 
 function App() {
+  const [modalVisible,setModalVisible] = useState(false)
+
+
   return (
     <div className="App">
+      <button onClick={()=> setModalVisible(true)}>show modal</button>
+      <Modal 
+        isVisible={modalVisible}
+        title="Modal title"
+        content={<p> Here is the content </p>}
+        footer={<button>Cancel</button>}
+        onClose={()=>setModalVisible(false)}
+      />
+      <TagInput tags={['NodeJs','MangoDB']} />
+      <Counter />
       <App2 />
       <AppP />
       <hr />
